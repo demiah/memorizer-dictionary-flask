@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+
+{% block header %}
+<script src="{{ url_for('static', filename='js/practice.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<br>
+{% if proper %}
+
+{% include 'flashmessages.html' %}
+
+
+
+
+     <form id="practiseForm">
+          <div class="d-flex justify-content-center">
+        <input class="btn btn-primary" type="submit" value="Start Practise" id="practiseButton">
+
+          </div>
+         <br>
+
+         <div class="container" role="alert" id="definition"></div>
+<div id="practiseChoose">
+
+</div>
+             <div id="feedback"></div>
+
+         </form>
+
+
+{% else %}
+      <p class="d-flex justify-content-center alert alert-danger">You need minimum 10 word to practise</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% include 'flashmessages.html' %}
+<p class="d-flex justify-content-center">Give information to register</p>
+ <div class="d-flex justify-content-center">
+
+
+<form action="#" method="post">
+    <div  class="form-group">
+<label for="username">Username</label>
+<input type="text" id="username" name="username" class="form-control">
+
+<label for="username">Password</label>
+<input type="password" id="password" name="password" class="form-control">
+    </div>
+       </br>
+ <div class="d-flex justify-content-center">
+
+        <input class="btn btn-primary" type="submit" value="Register">
+     </div>
+
+</form>
+ </div>
+
+{% endblock %}

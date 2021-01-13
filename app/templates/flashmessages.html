@@ -1,0 +1,19 @@
+{% with messages = get_flashed_messages(category_filter=["green"]) %}
+  {% if messages %}
+    {% for message in messages %}
+
+            <div class="alert alert-success d-flex justify-content-center" role="alert">{{ message }}</div>
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+{% with messages = get_flashed_messages(category_filter=["red"]) %}
+  {% if messages %}
+    {% for message in messages %}
+
+            <div class="alert alert-danger d-flex justify-content-center" role="alert">{{ message }}</div>
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}

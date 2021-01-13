@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+{% include 'flashmessages.html' %}
+
+<h4>
+<p class="d-flex justify-content-center">Hello&nbsp;<b>{{ session['user'] }}</b></p>
+  </h4>
+
+<p class="d-flex justify-content-center">Total&nbsp;<b>{{ userWordObjects|length }}</b>&nbsp;words</p>
+{% if userWordObjects %}
+
+<div class="container">
+    <h3 class="text-center mb-3">Words</h3>
+    <div class="table-responsive">
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr class="bg-dark text-white">
+      <th scope="col" class="text-center">Word</th>
+       <th scope="col" class="text-center">Power</th>
+    </tr>
+  </thead>
+  <tbody>
+ {% for userWord in userWordObjects %}
+
+     <tr>
+      <td class="text-center">{{userWord.word.word}}&nbsp</td>
+      <td class="text-center">{{userWord.power}}</td>
+    </tr>
+
+{% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+{% else %}
+
+        <div class="d-flex justify-content-center">You dont have any words in  your dictionary</div>
+ {% endif %}
+
+{% endblock %}
