@@ -1,4 +1,4 @@
-# memorizer-dictionary-flask
+# Word Memorizer - Dictionary Application
 
 1)Before using please take Rapidapi key for WordsApi. Link: https://rapidapi.com/dpventures/api/wordsapi 
 
